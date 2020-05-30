@@ -10,7 +10,7 @@ const WeatherItem = (props) => {
   
   return(
     <div>
-      <h3>{props.date}</h3>
+      <h3>{props.city.name}</h3>
       weather image
       temperature
     </div>
