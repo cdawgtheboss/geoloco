@@ -2,8 +2,9 @@ import React, { useEffect, useState } from 'react';
 
 const WeatherItem = (props) => {
   const item = props.item
+  console.log("item", item)
   return(
-    <div>
+    <div>      
       {item.weather[0].description}
     </div>
   )
@@ -16,14 +17,15 @@ function App() {
     fetch(apiUrl)
     .then(res => res.json())
     .then(data => setWeatherData(data))
-    }, [])
-
-
-
+  }, [])
+  
+  
   console.log("weatherData", weatherData)
   return(
     <div>
-      {weatherData && weatherData.list.map(wd => <WeatherItem item={wd} />)}
+      {weatherData && weatherData.city.name}
+      {/* {weatherData && weatherData.city.name} */}
+      <span>{weatherData && weatherData.list.map(wd => <WeatherItem item={wd} />)}</span> 
     </div>
   )
 }
