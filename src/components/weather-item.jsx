@@ -1,9 +1,7 @@
 import React, {useEffect, useState} from 'react';
 
 
-const kelvinToFahrenheit = (k) => {
-  return 32 + 9/5 * (k - 273.15)
-}
+
 
 const WeatherItem = (props) => {
   
@@ -18,3 +16,6 @@ const WeatherItem = (props) => {
 }
 
 export default WeatherItem;
+
+
+if(Date.prototype.getHours() )
